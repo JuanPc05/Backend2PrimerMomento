@@ -25,6 +25,7 @@ public class MascotaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(creada);
     }
 
+
     @GetMapping
     public ResponseEntity<List<Mascota>> listarMascotas() {
         return ResponseEntity.ok(service.listarMascotas());
