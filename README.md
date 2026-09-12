@@ -407,11 +407,8 @@ Para buscar en postman no se puede utilizar `api/Estado` e invocar el estado, da
 reconocer esta estructura fallará, para eso se utiliza una ruta segura que evite este error de `api/algo`
 y dejamos la ruta `/api/estado/estado`
 
-**Captura filtrado por Estado**
-
-![Extra](docs/img/EXTRA.png)
-
-
+> **[ CAPTURA 11: Funcionalidad extra ]**
+> ![Extra](docs/img/EXTRA.png)
 
 ---
 
