@@ -1,6 +1,7 @@
 package com.huellitas.service;
 
 import com.huellitas.exception.RecursoNoEncontradoException;
+import com.huellitas.model.Estado;
 import com.huellitas.model.Mascota;
 import com.huellitas.repository.MascotaRepository;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,10 @@ public class MascotaService {
         return mascotaRepository.findById(id).orElseThrow(() -> new RecursoNoEncontradoException(
                 "No existe el mascota con el id: " + id
         ));
+    }
+
+    public List<Mascota> buscarMascotaPorEstado(Estado estado) {
+        return mascotaRepository.findByEstado(estado);
     }
 
     public Mascota actualizar(Long id, Mascota datos) {

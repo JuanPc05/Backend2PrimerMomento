@@ -1,5 +1,6 @@
 package com.huellitas.controller;
 
+import com.huellitas.model.Estado;
 import com.huellitas.model.Mascota;
 import com.huellitas.service.MascotaService;
 import jakarta.validation.Valid;
@@ -34,6 +35,13 @@ public class MascotaController {
     @GetMapping("/{id}")
     public ResponseEntity<Mascota> buscarMascota(@PathVariable Long id) {
         return ResponseEntity.ok(service.buscarMascotaPorId(id));
+    }
+
+    //-------Nueva funcionalidad
+
+    @GetMapping("/estado/{estado}")
+    public ResponseEntity<List<Mascota>> buscarMascotaPorEstado(@PathVariable Estado estado) {
+        return ResponseEntity.ok(service.buscarMascotaPorEstado(estado));
     }
 
     @PutMapping("/{id}")

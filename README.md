@@ -391,6 +391,30 @@ URL, el método, la respuesta y el código de estado.
 
 ---
 
+## Reto adicional
+
+**Agregar una funcionalidad útil**
+
+Se agrega como funcionalidad extra el filtrado de las mascotas por el estado en que se encuentran
+esto permite a la veterinaria ser conscientes de los animales que tienen hospitalizados, enfermos, vacunados, etc
+
+Para lograr esto, springboot y JPA permiten agregar a la interfaz del repository una consulta que se convierte
+automaticamente a SQL con solo esta linea
+
+`List<Mascota> findByEstado(Estado estado);`
+
+Para buscar en postman no se puede utilizar `api/Estado` e invocar el estado, dado que el GetMapping al
+reconocer esta estructura fallará, para eso se utiliza una ruta segura que evite este error de `api/algo`
+y dejamos la ruta `/api/estado/estado`
+
+**Captura filtrado por Estado**
+
+![Extra](docs/img/EXTRA.png)
+
+
+
+---
+
 ## Autor
 
 - **Estudiante:** Juan Pablo Castillo Rueda
