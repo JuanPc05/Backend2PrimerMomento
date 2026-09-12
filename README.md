@@ -414,5 +414,5 @@ y dejamos la ruta `/api/estado/estado`
 
 ## Autor
 
-- **Estudiante:** Juan Pablo Castillo Rueda
+- **Estudiantes:** Juan Pablo Castillo Rueda, Johan Sebastian Sepulveda Villegas
 - **Proyecto:** Clínica Veterinaria MVC — Java / Spring Boot / API REST / Postman
